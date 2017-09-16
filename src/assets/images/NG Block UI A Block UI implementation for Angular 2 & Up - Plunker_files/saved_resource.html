@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://run.plnkr.co/preview/cj4s661w7000b3i5qi9fnwqo4/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ng-block-ui Example</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+
+    <!-- 1. Load libraries -->
+     <!-- Polyfill(s) for older browsers -->
+    <script src="./shim.min.js"></script>
+
+    <script src="./zone.js@0.7.2"></script>
+    <script src="./reflect-metadata@0.1.3"></script>
+    <script src="./system.src.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script src="./systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  <style>.hero[_ngcontent-c0] {
+  padding: 20px;
+  min-height: 240px;
+  background-color: #1976D2;
+  background: -webkit-linear-gradient(145deg,#9175c5,#42A5F5);
+  background: linear-gradient(145deg,#9175c5,#42A5F5);
+  color: #fff;
+  text-align: center;
+}
+
+.hero[_ngcontent-c0]   h1[_ngcontent-c0] {
+  font-size: 3.5em;
+  margin: 50px 0 0 0;
+}
+
+.hero[_ngcontent-c0]   p[_ngcontent-c0] {
+  font-size: 1.5em;
+  margin: 5px 0 15px 0;
+}
+
+.block-form[_ngcontent-c0] {
+  padding: 70px;
+  text-align: center;
+  background: #fff;
+}
+
+.control[_ngcontent-c0] {
+  display: block;
+  margin: 5px auto;
+  padding: 5px;
+  background: transparent;
+  font-size: 1.7em;
+  border: none;
+  text-align: center;
+}
+
+.control__btn[_ngcontent-c0] {
+  margin: 15px auto;
+  padding: 10px 15px;
+  font-size: 1.3em;
+  background: #00f;
+  color: #fff;
+  cursor: pointer;
+}
+
+.control__input[_ngcontent-c0] {
+  color: #708ada;
+  border-bottom: solid 3px #00f;
+  text-align: left;
+}
+
+.control__input[_ngcontent-c0]:focus {
+  outline: none;
+}
+
+.control__input[_ngcontent-c0]::placeholder {
+  color: #eae9e9;
+}</style><style>
+.block-ui-wrapper {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.70);
+  z-index: 30000;
+  cursor: wait;
+}
+
+.block-ui-wrapper.block-ui-wrapper--element {
+  position: absolute;
+}
+
+.block-ui-wrapper.active {
+  display: block;
+}
+
+.block-ui-wrapper.block-ui-main {
+  position: fixed;
+}
+
+.block-ui-spinner,
+.block-ui-template {
+  position: absolute;
+  top: 40%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.block-ui-spinner > .message {
+  font-size: 1.3em;
+  text-align: center;
+  color: #fff;
+}
+
+.block-ui__element {
+  position: relative;
+}
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  margin: 7px auto;
+  font-size: 5px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+</style></head>
+
+  <!-- 3. Display the application -->
+  <body>
+    <my-app _nghost-c0="" ng-version="4.2.5">
+<block-ui _ngcontent-c0="">
+     
+  <section _ngcontent-c0="" class="hero">
+    <h1 _ngcontent-c0="">NG Block UI</h1>
+    <p _ngcontent-c0="">Block UI Implementation for Angular 2 &amp; Up</p>
+      <iframe _ngcontent-c0="" frameborder="0" height="30px" scrolling="0" src="./github-btn.html" width="75px"></iframe>
+  </section>
+  <section _ngcontent-c0="" class="block-form">
+    <input _ngcontent-c0="" class="control control__input" placeholder="Custom Message" type="text">
+    <button _ngcontent-c0="" class="control control__btn">
+      Start Blocking
+    </button>
+  </section>
+
+    <block-ui-content ng-reflect-name="block-ui-main">
+<div class="block-ui-wrapper block-ui-main" ng-reflect-klass="block-ui-wrapper block-ui-main" ng-reflect-ng-class="[object Object]">
+  <!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><div class="block-ui-spinner">
+    <div class="loader"></div>
+    <!--bindings={}-->
+  </div>
+  <!--bindings={}-->
+</div>
+</block-ui-content>
+  </block-ui>
+</my-app>
+  
+
+</body></html>

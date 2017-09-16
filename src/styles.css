@@ -1,1 +1,207 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+
+body {
+  padding-left: 0rem;
+  padding-right: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  height: 100%;
+}
+
+table {
+  /*overwrite bootstrap property in order to render google chart perfectly*/
+  border-collapse: separate !important;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.navbar-default { margin : 0 !important; }
+
+.navbar-brand {
+    font-size: 14px;
+}
+
+.version {
+    font-size: 12px;
+    color: red;
+}
+
+/* adjusting bootstrap container class*/
+.container {
+  margin: 0 !important;
+  width: 100%;
+  height: 100%;
+}
+
+#mapcontainer {
+    width: inherit;
+    height: inherit;
+    color: #fff;
+    background: #222;
+    background-image: -webkit-gradient(radial,
+    50% 0, 10,
+    50% 0, 400,
+    from(rgba(255, 255, 255, 0.3)),
+    to(rgba(255, 255, 255, 0))
+    ); /* Safari 5 */
+    -webkit-background-image: radial-gradient(
+            center top,
+            circle,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0) 50%
+    );
+    /* Chrome, WK Nightly */
+    background-image: -moz-radial-gradient(
+            center top,
+            circle,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0) 50%
+    );
+    /* Gradient not supported on Opera */
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+/* resize navbar */
+.navbar-nav > li > a, 
+.navbar-brand {padding-top:5px !important; padding-bottom:0 !important; height: 30px; } 
+.navbar {min-height:30px !important;}
+
+/* remove rounded corner */
+.navbar {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+
+.panel {
+    margin: 2px;
+}
+
+.panel-body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.panel-fullscreen {
+    display: block;
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.with-background{
+  background: url('assets/images/crissxcross.png') repeat !important;
+}
+
+.breadcrumb {
+    margin-bottom: 0px;
+}
+
+.panel-heading{
+    height:28px;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+} 
+
+.metaphorarea {
+  height: 100%;
+}
+
+#metaphor {
+    width: 100%;
+    height: 100%;
+}
+
+.insetsarea {
+  height: 183px;
+}
+
+.chart-area {
+  height: 150px;
+}
+
+.table-area {
+  height: 150px;
+}
+
+.pdfarea {
+  height: 100%;
+}
+
+.row {
+	height:100%;
+}
+
+iframe {
+  padding: 0px;
+  margin: 0px;
+}
+
+.flex-row, .flex-row > div[class*='col-'] {  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:0 auto;
+    height:100%;
+}
+
+.flex-col {
+    display: flex;
+    display: -webkit-flex;
+    flex: 1;
+	  flex-flow: column nowrap;
+}
+
+.flex-grow {
+	display: flex;
+    -webkit-flex: 2;
+    flex: 2;
+}
+
+.button{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 12px;
+    height: 28px;
+    width: 28px !important;
+    margin: 2px;
+    line-height: 1;
+    border-radius:0;
+    border: 1px solid #ccc;
+    color:#333;
+    background-color: #eee;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    padding: 0 !important;
+}
+
+.button:hover{
+    background-color: white;
+}
+
+.button:active{
+    background-color: #ccc;
+}

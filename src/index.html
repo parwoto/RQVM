@@ -1,14 +1,35 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <title>Thesis</title>
+  <title>Requirements Quality Visual Metaphor</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
+
 <body>
-  <app-root>Loading...</app-root>
+  <app-root></app-root>
+  <!--scripts for supporting creating clouds in metaphor component-->
+  <script id="vs" type="x-shader/x-vertex">
+    varying vec2 vUv;
+    void main() {
+      vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+    }
+  </script>
+
+  <script id="fs" type="x-shader/x-fragment">
+    uniform sampler2D map;
+    varying vec2 vUv;
+    void main() {
+      float depth = gl_FragCoord.z / gl_FragCoord.w;
+
+      gl_FragColor = texture2D( map, vUv );
+      gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
+    }
+  </script>
 </body>
 </html>

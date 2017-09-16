@@ -1,0 +1,56 @@
+<nav class="navbar navbar-toggleable-xs navbar-inverse bg-inverse fixed-top">
+  <ul class="nav navbar-nav navbar-left">
+    <li>
+      <a class="navbar-brand push-right" href="#">SRS Metaphor App <i class="version">alpha</i></a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav mr-right">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">File <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#" id="aismenu" (click) = 'aisSelected()'>SRS of Academic Information System</a></li>
+        <li><a href="#" id="lismenu" (click) = 'lisSelected()'>SRS of Library Information System</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-toggle="modal" data-target="#aboutModal">About</a>
+    </li>
+<!--    <li class="nav-item">
+      <a class="nav-link" href="#" (click) = 'testSpinner()'>Test Spinner</a>
+    </li>-->
+  </ul>
+</nav>
+
+<!-- Modal -->
+<div id="aboutModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">SRS Metaphor App <i class="version">alpha</i></h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          This tool is an implementation of the result of research <b>"Visual Metaphor of the Quality of Software Requirements Specification"</b> conducted at Software Engineering Laboratory, Ritsumeikan University.
+        </p>
+        <p>
+          Student : Diding Adi Parwoto
+        </p>
+        <p>
+          Supervisors :
+        </p>
+        <ul>
+          <li>Prof. Atsushi Ohnishi</li>
+          <li>Assoc. Prof. Hiroya Itoga</li>
+          <li>Dr. Takayuki Omori</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
